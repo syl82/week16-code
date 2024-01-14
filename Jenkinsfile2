@@ -4,8 +4,15 @@ pipeline {
     tools {
         maven 'M2_HOME'
     }
+    stage('sonarqube scan'){
 
-    stages{
+            steps{
+
+                sh 'mvn sonar:sonar'
+
+            }
+
+        }
 
         stage('all maven commands'){
 
@@ -17,6 +24,10 @@ pipeline {
 
         }
 
+        
+
     }
 
-}
+
+
+    
