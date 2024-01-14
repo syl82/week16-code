@@ -1,10 +1,16 @@
 pipeline {
 
-    agent any
+    agent any 
+
     tools {
+
         maven 'M2_HOME'
+
     }
-    stage('sonarqube scan'){
+
+    stages{
+
+        stage('sonarqube scan'){
 
             steps{
 
@@ -28,6 +34,6 @@ pipeline {
 
     }
 
+}
 
 
-    
