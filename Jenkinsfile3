@@ -1,14 +1,14 @@
-pipeline {
+pipeline{
     agent {
-        label 'ansible'
-        stages {
-            stage ('check current directory'){
-                steps {
-                    sh'pwd'
-                    sh'whoami'
-                  sh "mkdir \$(date '+%Y%m%d_%H%M%S')"  
-                }
+        label'ansible'
+    }
+    stages{
+        stage ('check current directory'){
+            steps {
+                sh'pwd'
+                sh'whoami'
+                sh "mkdir \$(date '+%Y%m%d_%H%M%S')"
             }
-        } 
+        }
     }
 }
